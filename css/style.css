@@ -56,6 +56,19 @@ header{
 }
 .navbar{
     margin: 0;
+    display: flex;
+    align-items: center;
+}
+.navbtn{
+    font-family: var(--font1);
+    color: var(--machadopy-l-preto);
+    background: var(--machadopy-principal);
+    border-color: var(--machadopy-l-preto);
+    padding-inline: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .menuham{
     display: flex;
@@ -95,6 +108,7 @@ nav{
 
 .nav-list{
     list-style: none;
+    align-items: center;
     display: flex;
     letter-spacing: 0.2vh;
     gap: 30px;
@@ -107,28 +121,93 @@ nav{
 }
 .calltoaction{
     color: var(--machadopy-cinzaharmonia);
-    width: 1920px;
-    height: 700px;
+    width: 100%;
     text-align: center;
     margin-top: 12vh;
     padding-top: 12vh;
     font-size: 30px;
 }
-.calltoaction a{
+ .text-a{
     color: var(--machadopy-principal);
-    font-size: 34px;
+    background-image: var(--machadopy-gradient);
+    border-color: var(--machadopy-principal);
+    font-size: 24px;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .second-container{
     display: flex;
     justify-content: center;
+   
 }
 .second-calltoaction{
     background-color: var(--machadopy-cinzaharmonia);
-    width: 1920px;
-    height: 700px;
+    width: 100%;
+    min-height: 700px;
     text-align: center;
     margin-top: 12vh;
     padding-top: 12vh;
+    padding-inline: 2rem;
+    padding-bottom: 4rem;
+}
+.portf img{
+    max-width: 60px;
+}
+.portf{
+    max-width: 1200px;
+    margin: 3rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+.portf-card{
+    background: var(--machadopy-gradient);
+    border: 1px solid rgba(45, 228, 148, 0.3);
+    border-radius: 16px;
+    color: var(--machadopy-cinzaharmonia);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.portf-logo{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--machadopy-cinzaharmonia);
+    border: 1px solid rgba(45, 228, 148, 0.55);
+}
+.portf-logo i{
+    font-size: 28px;
+    color: var(--machadopy-principal);
+}
+.portf-card h3{
+    font-size: 1.8rem;
+}
+.portf-card p{
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+.portf-link{
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: var(--machadopy-l-preto);
+    background-color: var(--machadopy-principal);
+    border: 1px solid var(--machadopy-l-preto);
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.05rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.portf-link:hover{
+    transform: translateY(-2px);
+    opacity: 1;
 }
 .text-main{
     z-index: 0;
@@ -140,12 +219,145 @@ nav{
     transform: translate(-50%, 50%);
     align-items: center;
 }
- .text-a{
-    color: var(--machadopy-l-preto);
-    font-size: 24px;
+.slider{
+    margin: 0 auto;
+    width: auto;
+    height: 100dvh;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.carrossel{
+    background-size: cover;
+    width: 100%;
+    height: 100dvh;
+    min-height: 100vh;
+    margin-top: 0;
+    display: flex;
+    position: relative;
+}
+.carrossel input{
+    display: none;
+}
+.imagens{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
+.imagens::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    pointer-events: none;
+}
+.textmobile{
+    display: none;
+}
+.carousel-text h1{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 5rem;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, 40%);
+    text-align: end;
 
 }
+.carousel-text p{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 2rem;
+    top: 65%;
+    left: 81.5%;
+    white-space: nowrap;
+    transform: translate(-50%, 40%);
+    text-align: end;
+
+}
+.imgcar{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+.manual-navigation{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+.manual-btn{
+    border: 2px solid var(--maktub-verde);
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 1vw;
+}
+.manual-btn:hover{
+    color: white;
+}
+#radio1:checked ~ .slide:nth-of-type(1),
+#radio2:checked ~ .slide:nth-of-type(2),
+#radio3:checked ~ .slide:nth-of-type(3),
+#radio4:checked ~ .slide:nth-of-type(4),
+#radio5:checked ~ .slide:nth-of-type(5),
+#radio6:checked ~ .slide:nth-of-type(6) {
+    opacity: 1;
+    transform: translateX(0);
+}
+.navigation-auto div{
+    border: 2px solid var(--maktub-verde);
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navigation-auto{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 1vw;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4,
+#radio5:checked ~ .navigation-auto .auto-btn5,
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+    background-color: var(--maktub-verde);
+}
+
 footer{
     background-color: var(--machadopy-cinzaharmonia);
 }
@@ -371,6 +583,21 @@ footer{
     .container-imagens{
         height: 100dvh;
         overflow: hidden;
+    }
+    .second-calltoaction{
+        padding-inline: 1rem;
+        min-height: auto;
+        height: auto;
+    }
+    .portf{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .portf-card h3{
+        font-size: 1.5rem;
+    }
+    .portf-card p{
+        font-size: 1rem;
     }
     .imagens{
         content: url(/img/moba-fundo.jpg);
