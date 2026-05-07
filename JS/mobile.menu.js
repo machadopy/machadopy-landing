@@ -12,6 +12,7 @@ class MobileNavbar{
         console.log(this)
         this.mobileMenu.classList.toggle(this.activeClass);
         this.navList.classList.toggle(this.activeClass);
+        document.body.classList.toggle(this.activeClass);
     }
 
     addClickEvent(){
