@@ -21,6 +21,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+}
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -625,12 +628,18 @@ footer{
     body{
         overflow-x: hidden;
     }
+    body.active{
+        overflow: hidden;
+    }
     nav{
         min-height: 8vh;
         padding: 0 2vh;
     }
     .mobile-hide{
         display: none;
+    }
+    .calltoaction{
+        margin-top: 1vh;
     }
     .nav-list{
         position: absolute;
