@@ -627,9 +627,17 @@ footer{
 @media (max-width: 1025px){
     body{
         overflow-x: hidden;
+        padding-top: 8vh;
     }
     body.active{
         overflow: hidden;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
     }
     nav{
         min-height: 8vh;
