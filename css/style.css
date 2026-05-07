@@ -21,9 +21,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-        scroll-behavior: smooth;
-}
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -123,7 +120,6 @@ nav{
     justify-content: center;
 }
 .calltoaction{
-    margin: 1rem;
     color: var(--machadopy-cinzaharmonia);
     width: 100%;
     text-align: center;
@@ -213,6 +209,105 @@ nav{
     transform: translateY(-2px);
     opacity: 1;
 }
+.tofix{
+    padding: 5rem 1.5rem;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.96) 0%, rgba(24, 88, 98, 0.92) 100%);
+    color: var(--machadopy-cinzaharmonia);
+}
+.tofix-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.tofix-header{
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 3rem auto;
+}
+.tofix-eyebrow{
+    color: var(--machadopy-principal);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+.tofix-header h2,
+.tofix-cases h2{
+    font-size: 2.4rem;
+    line-height: 1.05;
+    margin-bottom: 0.75rem;
+}
+.tofix-header p{
+    color: rgba(209, 209, 209, 0.82);
+    font-size: 1.05rem;
+}
+.tofix-grid,
+.tofix-cases-grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.tofix-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 3rem;
+}
+.tofix-card,
+.tofix-case-card{
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(45, 228, 148, 0.18);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+.tofix-card h3,
+.tofix-case-card h3{
+    font-size: 1.45rem;
+    margin-bottom: 0.75rem;
+}
+.tofix-card p,
+.tofix-case-card p{
+    color: rgba(248, 250, 252, 0.78);
+    line-height: 1.45;
+}
+.tofix-iconbox,
+.tofix-preview{
+    margin-top: 1.25rem;
+    height: 120px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: rgba(209, 209, 209, 0.08);
+    color: var(--machadopy-principal);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+.tofix-iconrow,
+.tofix-tags{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    color: var(--machadopy-principal);
+    font-size: 1.1rem;
+}
+.tofix-cases h2{
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+.tofix-cases-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.tofix-case-card{
+    display: flex;
+    flex-direction: column;
+}
+.tofix-case-card .tofix-preview{
+    font-size: 1.1rem;
+    color: var(--machadopy-cinzaharmonia);
+    text-transform: none;
+}
+.tofix-tags i{
+    font-size: 1.1rem;
+}
 .text-main{
     z-index: 0;
     position: absolute;
@@ -295,7 +390,6 @@ nav{
     inset: 0;
     opacity: 0;
     transition: opacity 0.5s ease-in;
-    margin: 1rem;
 }
 .manual-navigation{
     position: absolute;
@@ -461,7 +555,7 @@ footer{
 .fuelr-form select{
 
     border: .1rem var(--machadopy-cinzaharmonia);
-    border-top-left-radius: 1.5rem;
+    
 
     border-bottom: .2rem solid var(--machadopy-verde);
 
@@ -519,7 +613,9 @@ footer{
 .mapa{
     border-radius: 20px     ;
 }
-
+.tofix-iconbox img{
+        max-width: 65px;
+    }
 @media (hover: hover) {
     .imgmenu:hover {
         color: var(--machadopy-verde);
@@ -532,7 +628,6 @@ footer{
     nav{
         min-height: 8vh;
         padding: 0 2vh;
-        overflow-x: hidden;
     }
     .mobile-hide{
         display: none;
@@ -556,6 +651,7 @@ footer{
     .a-underl {
         text-decoration: underline ;
         text-underline-offset: 2vh;
+        cursor: pointer;
     }
 
     .menuham{
@@ -587,8 +683,17 @@ footer{
         font-size: bold;
     }
     .container-imagens{
-        height: 100dvh;
+        height: auto;
         overflow: hidden;
+    }
+    .slider{
+        height: auto;
+        min-height: 0;
+    }
+    .carrossel{
+        height: auto;
+        min-height: 0;
+        display: block;
     }
     .second-calltoaction{
         padding-inline: 1rem;
@@ -605,17 +710,59 @@ footer{
     .portf-card p{
         font-size: 1rem;
     }
+    .tofix{
+        padding: 4rem 1rem;
+    }
+    .tofix-grid,
+    .tofix-cases-grid{
+        grid-template-columns: 1fr;
+    }
+    .tofix-header h2,
+    .tofix-cases h2{
+        font-size: 1.8rem;
+    }
+    .tofix-card,
+    .tofix-case-card{
+        padding: 1.25rem;
+    }
+    .tofix-iconbox img{
+        max-width: 65px;
+    }
+    .tofix-iconbox,
+    .tofix-preview{
+        height: 96px;
+    }
     .imagens{
-        background-image: url(/img/moba-fundo.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        display: block;
         margin-top: 0;
         width: 100%;
-        height: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        min-height: 240px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-    .imgcar{
-        object-fit: contain;
+    .imagens .slide{
+        display: none;
+    }
+    .imagens .slide.first{
+        display: block;
+        position: absolute;
+        inset: 0;
+        opacity: 1;
+    }
+    .imagens .slide.first .imgcar{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+    .imagens .navigation-auto,
+    .imagens .manual-navigation{
+        display: none;
     }
     .text-main{
         text-wrap: nowrap;
@@ -670,7 +817,6 @@ footer{
         margin-left:1rem;
         margin-right: 1rem;
         margin-bottom: 5rem;
-        border-radius: 0.6rem;
         background-color: var(--machadopy-cinzaharmonia);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.977);
     }
@@ -711,7 +857,6 @@ footer{
     .fuelr-form select{
 
         border: .1rem var(--machadopy-cinzaharmonia);
-        border-top-left-radius: 1.5rem;
 
         border-bottom: .2rem solid var(--machadopy-verde);
 
@@ -742,7 +887,7 @@ footer{
         height: 5rem;
 
         border: .1rem solid var(--machadopy-preto);
-        border-radius: .6rem;
+
 
         transition: all 300ms ease-in-out;
 

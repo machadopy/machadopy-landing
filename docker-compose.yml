@@ -1,0 +1,9 @@
+services:
+  resume_page:
+    image: nginx:alpine
+    container_name: resume_container
+    restart: always
+    ports:
+      - "8081:80"
+    volumes:
+      - .:/usr/share/nginx/html  # O ponto (.) referencia a pasta atual (onde o git clonou)
